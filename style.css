@@ -131,7 +131,6 @@ body::before {
 
 .brand-logo { font-family: 'Courier New', Courier, monospace; letter-spacing: 4px; text-transform: uppercase; font-size: 1.5rem; font-weight: 800; color: var(--neon-lime-color); }
 
-/* SYSTEM MONITOR TERMINAL & LIVE CYBER CLOCK UI */
 .hero-right { position: relative; width: 380px; height: 300px; display: flex; align-items: center; justify-content: center; }
 .cyber-terminal-hud {
   width: 100%; background: var(--bg-glass-dense); border: 1px solid var(--border-line-spec); border-radius: 12px; padding: 24px;
@@ -151,7 +150,6 @@ body::before {
 .hud-stat-line { display: flex; justify-content: space-between; font-family: monospace; font-size: 0.8rem; border-bottom: 1px dashed rgba(255, 255, 255, 0.03); padding-bottom: 6px; }
 .hud-stat-lbl { color: var(--text-secondary-layer); letter-spacing: 1px; }
 
-/* PREMIUM TECH MATRIX GRID */
 .premium-matrix-container { display: flex; flex-direction: column; gap: 3.5rem; }
 .category-title-terminal { font-family: monospace; font-size: 1.1rem; color: #fff; margin-bottom: 1.8rem; display: flex; align-items: center; gap: 12px; letter-spacing: 1px; }
 .category-title-terminal i { color: var(--neon-cyan-color); text-shadow: 0 0 10px rgba(0, 245, 255, 0.4); }
@@ -181,17 +179,115 @@ body::before {
 .cyber-skill-card p { font-size: 0.85rem; line-height: 1.5; color: var(--text-secondary-layer); }
 
 @media (max-width: 968px) {
-  .nav-container { height: 75px; flex-direction: row !important; padding: 0 5%; justify-content: space-between; }
-  .nav-menu { display: flex !important; gap: 1rem; }
-  .menu-item { font-size: 0.7rem; letter-spacing: 0.5px; }
-  .hero-block { flex-direction: column-reverse; text-align: center; justify-content: center; padding-top: 140px; gap: 5.5rem; }
-  .hero-right { width: 100%; max-width: 340px; margin: 0 auto; }
-  .cta-wrapper { justify-content: center; }
-  .profile-layout, .hub-distribution-grid { grid-template-columns: 1fr; gap: 3.5rem; }
-  .avatar-card { max-width: 220px; margin: 0 auto; }
-  .stats-matrix { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-  .input-form-row { grid-template-columns: 1fr; gap: 1.5rem; }
+  .main-title {
+    font-size: 2.8rem !important; 
+    line-height: 1.2 !important;
+    text-align: center;
+  }
+  
+  .typewriter-sub {
+    font-size: 1.3rem !important;
+    text-align: center;
+    height: auto;
+  }
+
+  .head-title {
+    font-size: 2rem !important; 
+    margin-bottom: 2rem !important;
+  }
+
+  .hero-block {
+    flex-direction: column-reverse !important;
+    text-align: center;
+    padding-top: 110px !important;
+    gap: 3rem !important;
+  }
+
+  .hero-right {
+    width: 100% !important;
+    max-width: 320px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  .cyber-terminal-hud {
+    padding: 16px !important;
+  }
+
+  .time-main-stream {
+    font-size: 2.2rem !important; 
+  }
+
+
+  .terminal-stats-stack {
+    width: 100% !important;
+  }
+  
+  .hud-stat-line {
+    font-size: 0.75rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    text-align: right !important;
+  }
+
+  .hud-stat-lbl {
+    text-align: left !important;
+  }
+
+  /* About / Who I Am Content Responsive Fix */
+  .profile-layout {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .bio-content {
+    text-align: center !important;
+  }
+  
+  .bio-content p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .stats-matrix {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+    padding: 16px !important;
+    text-align: center !important;
+  }
+
+  .cell-num {
+    font-size: 1.5rem !important;
+  }
+
+  .cell-lbl {
+    font-size: 0.6rem !important;
+  }
+
+  .cta-wrapper {
+    justify-content: center !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 1rem !important;
+  }
+
+  .action-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
 }
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 2.4rem !important;
+  }
+  
+  .stats-matrix {
+    grid-template-columns: 1fr !important; /* Clean vertical stack for narrow screens */
+  }
+}
+
 /* =
 .cyber-terminal-footer {
   width: 100%;
