@@ -23,8 +23,8 @@ body {
   position: relative;
 }
 
-
-section, header, footer, nav, .nav-container {
+/* ⚡ FIXED: Dynamic global centering engine for all viewports */
+section, header, footer, nav, .nav-container, .section-layout, .hero-block, .profile-layout, .hub-distribution-grid {
   width: 100% !important;
   max-width: 1300px !important;
   margin-left: auto !important;
@@ -250,33 +250,43 @@ body::before {
   letter-spacing: 1px;
 }
 
+/* ⚡ FIXED RESPONSIVE ENGINE: Forces 100% stretch on smaller viewports to unlock auto-centering */
 @media (max-width: 968px) {
+  section, header, footer, nav, .section-layout, .hero-block, .profile-layout, .hub-distribution-grid {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
   .main-title { font-size: 2.8rem !important; line-height: 1.2 !important; text-align: center; }
   .typewriter-sub { font-size: 1.3rem !important; text-align: center; height: auto; }
   .head-title { font-size: 2rem !important; margin-bottom: 2rem !important; }
-  .hero-block { flex-direction: column-reverse !important; text-align: center; padding-top: 110px !important; gap: 3rem !important; }
+  .hero-block { flex-direction: column-reverse !important; text-align: center; padding-top: 110px !important; gap: 3rem !important; width: 100% !important; }
   .hero-right { width: 100% !important; max-width: 320px !important; height: auto !important; margin: 0 auto !important; }
-  .cyber-terminal-hud { padding: 16px !important; }
+  .cyber-terminal-hud { padding: 16px !important; width: 100% !important; }
   .time-main-stream { font-size: 2.2rem !important; }
   .terminal-stats-stack { width: 100% !important; }
   .hud-stat-line { font-size: 0.75rem !important; display: flex !important; justify-content: space-between !important; align-items: center !important; text-align: right !important; }
   .hud-stat-lbl { text-align: left !important; }
-  .profile-layout { grid-template-columns: 1fr !important; gap: 2rem !important; }
-  .bio-content { text-align: center !important; }
+  .profile-layout { grid-template-columns: 1fr !important; gap: 2rem !important; width: 100% !important; }
+  .bio-content { text-align: center !important; width: 100% !important; display: flex !important; flex-direction: column !important; align-items: center !important; }
   .bio-content p { font-size: 0.95rem !important; line-height: 1.6 !important; }
-  .stats-matrix { grid-template-columns: repeat(2, 1fr) !important; gap: 1.5rem !important; padding: 16px !important; text-align: center !important; }
+  .stats-matrix { grid-template-columns: repeat(2, 1fr) !important; gap: 1.5rem !important; padding: 16px !important; text-align: center !important; width: 100% !important; }
   .cell-num { font-size: 1.5rem !important; }
   .cell-lbl { font-size: 0.6rem !important; }
   .cta-wrapper { justify-content: center !important; flex-direction: column !important; width: 100% !important; gap: 1rem !important; }
   .action-btn { width: 100% !important; justify-content: center !important; }
+  .hub-distribution-grid { width: 100% !important; }
+  .hub-form-panel { width: 100% !important; }
 }
 
 @media (max-width: 768px) {
-  .footer-core-grid { flex-direction: column; text-align: center; gap: 12px; }
+  .footer-core-grid { flex-direction: column; text-align: center; gap: 12px; width: 100% !important; }
 }
 
 @media (max-width: 480px) {
   .main-title { font-size: 2.4rem !important; }
-  .stats-matrix { grid-template-columns: 1fr !important; }
+  .stats-matrix { grid-template-columns: 1fr !important; width: 100% !important; }
 }
-
